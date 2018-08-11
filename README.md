@@ -3,8 +3,8 @@ search and download up to 100 images in full resolution from google images
 
 # How to use (programmers)
 * Make sure you have the following libraries installed:
- * beautifulsoup4
- * requests-html
+  * beautifulsoup4
+  * requests-html
 * Download and extract this repository
 * Move `GoogleImages.py` to your working directory
 * Include in your code `from GoogleImages import GoogleImages` to import the script
