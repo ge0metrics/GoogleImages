@@ -10,7 +10,7 @@ Search and download up to 100 images in full resolution from google images
 * Include in your code `from GoogleImages import GoogleImages` to import the script
 * Instantiate the class with `gi=GoogleImages()` 
   * You can do `gi=GoogleImages(outputs=False)` if you would rather not see any output
-*  `gi.search("cat memes")` to start a search and load `gi` with the results
+* `gi.search("cat memes")` to start a search and load `gi` with the results
   * You can do `gi.search("cat memes",limit=5)` if you want to limit the search to only 5 results
   * It is limited to a maximum of 100, you cannot exceed this
 * `gi.download()` to download the images to a folder that will be created by the script
