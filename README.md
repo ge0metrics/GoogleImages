@@ -1,5 +1,5 @@
 # GoogleImages
-search and download up to 100 images in full resolution from google images
+Search and download up to 100 images in full resolution from google images
 
 # How to use (programmers)
 * Make sure you have the following libraries installed:
@@ -8,7 +8,7 @@ search and download up to 100 images in full resolution from google images
 * Download and extract this repository
 * Move `GoogleImages.py` to your working directory
 * Include in your code `from GoogleImages import GoogleImages` to import the script
-* Instantiate the class with `gi=GoogleImages()`
+* Instantiate the class with `gi=GoogleImages()` 
   * You can do `gi=GoogleImages(outputs=False)` if you would rather not see any output
 *  `gi.search("cat memes")` to start a search and load `gi` with the results
   * You can do `gi.search("cat memes",limit=5)` if you want to limit the search to only 5 results
