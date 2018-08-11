@@ -1,5 +1,5 @@
 # GoogleImages
-search and download up to 100 images in full resolution from google images
+Search and download up to 100 images in full resolution from google images
 
 # How to use (programmers)
 * Make sure you have the following libraries installed:
