@@ -12,6 +12,8 @@ class GoogleImages:
         self.path=None
         self.images=None
 
+        self.outputs=outputs
+
     def search(self,query,limit=100):
         url="http://google.com/search?q={}&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi7kd3o-ODcAhWIAcAKHSQnAUMQ_AUICigB&biw=1366&bih=633".format(query)
         self.title=query.replace(" ","_")
@@ -43,18 +45,27 @@ class GoogleImages:
             for index,image in enumerate(self.images):
                 try:
                     if "http" in image:
-                        if "gif" in self.title:
-                            filename="{}/{}{}.gif".format(self.path,self.title,index)
-                        else:
-                            filename="{}/{}{}.png".format(self.path,self.title,index)
+                        Type=self.get_type(image)
+                        filename="{}/{}{}{}".format(self.path,self.title,index,Type)
                         urllib.request.urlretrieve(image,filename)
-                        if outputs==True:
+                        if self.outputs==True:
                             print(filename)
                     else:
-                        print("Could not fetch url: {}".format(image))
+                        if self.outputs==True:
+                            print("Could not fetch url: {}".format(image))
                 except urllib.error.HTTPError as error:
-                    if outputs==True:
+                    if self.outputs==True:
                         print(error)
                 except urllib.error.URLError as error:
-                    if outputs==True:
+                    if self.outputs==True:
                         print(error)
+
+    def get_type(self,image):
+        if ".gif" in image:
+            return ".gif"
+        elif ".png" in image:
+            return ".png"
+        elif ".jpg" in image:
+            return ".jpg"
+        else:
+            return ".jpg"
