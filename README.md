@@ -30,4 +30,4 @@ Search and download up to 100 images in full resolution from google images
 
 # Extra notes (for everybody)
 * The program will now detect `.png`, `.jpg` and `.gif` filetypes. If it doesn't detect those, it will save as `.jpg`.
-* Due to the way this script works, very fast and repetitive access may make Google think you are attempting a DDOS and temporarily ban your IP address from making more requests, therefore it is advised you use this tool respectfully
+* Due to the way this program works, very fast and repetitive access may cause Google to block you from making more requests, therefore it is advised you don't abuse this tool
